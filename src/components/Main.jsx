@@ -1,6 +1,9 @@
 import Card from "./Card"
 
-function Main() {
+function Main({data}) {
+
+console.log(data);
+
   return (
     <>
        <main className="bg-[#f6f7fa]">
@@ -113,8 +116,9 @@ function Main() {
                         <div id="content" className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
                               
                               {
-                                Array(8).fill('').map( item=>(
-                                  <Card />
+                                data.map( item=>(
+                                    
+                                  <Card item={item} />
                                 )) }
                         </div>
                     </div>
